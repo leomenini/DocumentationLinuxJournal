@@ -97,39 +97,9 @@ psql -U leo -d freecodecamp -h localhost
 
 ---
 
-# Nextcloud en Docker
-
-El PostgreSQL instalado con `apt` **no afecta** al PostgreSQL utilizado por Nextcloud.
-
-En el `docker-compose.yml`:
-
-```yaml
-POSTGRES_HOST: db
-```
-
-`db` es el nombre del servicio Docker:
-
-```yaml
-services:
-  db:
-    image: postgres:17
-```
-
-Además, el contenedor **no publica** el puerto 5432:
-
-```text
-5432/tcp
-```
-
-No aparece:
-
-```text
-0.0.0.0:5432->5432/tcp
-```
-
 Por lo tanto:
 
-* PostgreSQL del host → desarrollo personal / cursos.
+* PostgreSQL del host → desarrollo personal
 * PostgreSQL del contenedor → únicamente Nextcloud.
 
 Ambos funcionan de forma independiente.
