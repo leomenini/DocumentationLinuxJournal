@@ -1,0 +1,6 @@
+cd ~/Descargas
+wget --limit-rate=2m http://debian.xfree.com.ar/debian-cd/13.6.0-live/amd64/iso-hybrid/debian-live-13.6.0-amd64-cinnamon.iso \
+     http://debian.xfree.com.ar/debian-cd/13.6.0-live/amd64/iso-hybrid/SHA256SUMS
+sha256sum -c --ignore-missing SHA256SUMS
+
+
